@@ -1,4 +1,4 @@
-public class Person {
+public abstract class Person {
     private String name;
     private int age;
     private String contactNumber;
@@ -38,4 +38,3 @@ public class Person {
         this.contactNumber = contactNumber;
     }
 }
-
