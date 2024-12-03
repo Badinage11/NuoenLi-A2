@@ -1,31 +1,40 @@
-public class Visitor extends Person {
-    private String ticketNumber;
+class Visitor {
+    private String name;
+    private int age;
+    private String phoneNumber;
+    private String ticketId;
     private String visitDate;
 
-    public Visitor() {
-        // Default constructor
-    }
-
-    public Visitor(String name, int age, String contactNumber, String ticketNumber, String visitDate) {
-        super(name, age, contactNumber);
-        this.ticketNumber = ticketNumber;
+    public Visitor(String name, int age, String phoneNumber, String ticketId, String visitDate) {
+        this.name = name;
+        this.age = age;
+        this.phoneNumber = phoneNumber;
+        this.ticketId = ticketId;
         this.visitDate = visitDate;
     }
 
-    // Getters and Setters
-    public String getTicketNumber() {
-        return ticketNumber;
+    public String getName() {
+        return name;
     }
 
-    public void setTicketNumber(String ticketNumber) {
-        this.ticketNumber = ticketNumber;
+    public int getAge() {
+        return age;
+    }
+
+    public String getPhoneNumber() {
+        return phoneNumber;
+    }
+
+    public String getTicketId() {
+        return ticketId;
     }
 
     public String getVisitDate() {
         return visitDate;
     }
 
-    public void setVisitDate(String visitDate) {
-        this.visitDate = visitDate;
+    @Override
+    public String toString() {
+        return "Visitor{name='" + name + "', age=" + age + "}";
     }
 }
