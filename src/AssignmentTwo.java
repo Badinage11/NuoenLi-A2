@@ -1,8 +1,7 @@
 public class AssignmentTwo {
 
     public static void partThree() {
-        Ride ride = new Ride("Roller Coaster", 20, new Employee("Operator", 30, "123456789", "E001", "Operator"));
-
+        Ride ride = new Ride("Roller Coaster", 20, null, 5);
         Visitor v1 = new Visitor("Alice", 25, "111-111-1111", "T001", "2023-12-01");
         Visitor v2 = new Visitor("Bob", 28, "222-222-2222", "T002", "2023-12-01");
         Visitor v3 = new Visitor("Charlie", 22, "333-333-3333", "T003", "2023-12-01");

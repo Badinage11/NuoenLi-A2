@@ -1,40 +1,49 @@
-class Visitor {
-    private String name;
-    private int age;
-    private String phoneNumber;
-    private String ticketId;
-    private String visitDate;
+//
+// Source code recreated from a .class file by IntelliJ IDEA
+// (powered by FernFlower decompiler)
+//
 
-    public Visitor(String name, int age, String phoneNumber, String ticketId, String visitDate) {
-        this.name = name;
-        this.age = age;
-        this.phoneNumber = phoneNumber;
-        this.ticketId = ticketId;
-        this.visitDate = visitDate;
+public class Visitor extends Person {
+    private String visitorId;
+    private String membershipType;
+
+    public Visitor() {
     }
 
-    public String getName() {
-        return name;
+    public Visitor(String name, int age, String gender, String visitorId, String membershipType) {
+        super(name, age, gender);
+        this.visitorId = visitorId;
+        this.membershipType = membershipType;
     }
 
-    public int getAge() {
-        return age;
+    public String getVisitorId() {
+        return this.visitorId;
     }
 
-    public String getPhoneNumber() {
-        return phoneNumber;
+    public void setVisitorId(String visitorId) {
+        this.visitorId = visitorId;
     }
 
-    public String getTicketId() {
-        return ticketId;
+    public String getMembershipType() {
+        return this.membershipType;
     }
 
-    public String getVisitDate() {
-        return visitDate;
+    public void setMembershipType(String membershipType) {
+        this.membershipType = membershipType;
     }
 
-    @Override
-    public String toString() {
-        return "Visitor{name='" + name + "', age=" + age + "}";
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        } else if (!(obj instanceof Visitor)) {
+            return false;
+        } else {
+            Visitor other = (Visitor)obj;
+            return this.visitorId != null && this.visitorId.equals(other.visitorId);
+        }
+    }
+
+    public int hashCode() {
+        return this.visitorId != null ? this.visitorId.hashCode() : 0;
     }
 }
