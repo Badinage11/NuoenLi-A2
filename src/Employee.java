@@ -3,16 +3,15 @@ public class Employee extends Person {
     private String position;
 
     public Employee() {
-        // Default constructor
+        super();
     }
 
-    public Employee(String name, int age, String contactNumber, String employeeId, String position) {
-        super(name, age, contactNumber);
+    public Employee(String name, int age, String gender, String employeeId, String position) {
+        super(name, age, gender);
         this.employeeId = employeeId;
         this.position = position;
     }
 
-    // Getters and Setters
     public String getEmployeeId() {
         return employeeId;
     }
