@@ -1,19 +1,16 @@
 public abstract class Person {
     private String name;
     private int age;
-    private String contactNumber;
+    private String gender;
 
-    public Person() {
-        // Default constructor
-    }
+    public Person() {}
 
-    public Person(String name, int age, String contactNumber) {
+    public Person(String name, int age, String gender) {
         this.name = name;
-        this.age = age;
-        this.contactNumber = contactNumber;
+        setAge(age);
+        this.gender = gender;
     }
 
-    // Getters and Setters
     public String getName() {
         return name;
     }
@@ -27,14 +24,18 @@ public abstract class Person {
     }
 
     public void setAge(int age) {
-        this.age = age;
+        if(age >= 0){
+            this.age = age;
+        } else {
+            throw new IllegalArgumentException("Age cannot be negative.");
+        }
     }
 
-    public String getContactNumber() {
-        return contactNumber;
+    public String getGender() {
+        return gender;
     }
 
-    public void setContactNumber(String contactNumber) {
-        this.contactNumber = contactNumber;
+    public void setGender(String gender) {
+        this.gender = gender;
     }
 }
