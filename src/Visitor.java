@@ -1,13 +1,9 @@
-//
-// Source code recreated from a .class file by IntelliJ IDEA
-// (powered by FernFlower decompiler)
-//
-
 public class Visitor extends Person {
     private String visitorId;
     private String membershipType;
 
     public Visitor() {
+        super();
     }
 
     public Visitor(String name, int age, String gender, String visitorId, String membershipType) {
@@ -17,7 +13,7 @@ public class Visitor extends Person {
     }
 
     public String getVisitorId() {
-        return this.visitorId;
+        return visitorId;
     }
 
     public void setVisitorId(String visitorId) {
@@ -25,25 +21,23 @@ public class Visitor extends Person {
     }
 
     public String getMembershipType() {
-        return this.membershipType;
+        return membershipType;
     }
 
     public void setMembershipType(String membershipType) {
         this.membershipType = membershipType;
     }
 
+    @Override
     public boolean equals(Object obj) {
-        if (this == obj) {
-            return true;
-        } else if (!(obj instanceof Visitor)) {
-            return false;
-        } else {
-            Visitor other = (Visitor)obj;
-            return this.visitorId != null && this.visitorId.equals(other.visitorId);
-        }
+        if(this == obj) return true;
+        if(!(obj instanceof Visitor)) return false;
+        Visitor other = (Visitor) obj;
+        return visitorId != null && visitorId.equals(other.visitorId);
     }
 
+    @Override
     public int hashCode() {
-        return this.visitorId != null ? this.visitorId.hashCode() : 0;
+        return visitorId != null ? visitorId.hashCode() : 0;
     }
 }
